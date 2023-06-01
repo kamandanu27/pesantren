@@ -5,9 +5,8 @@
 	<script type="text/javascript" src="<?=base_url()?>public/vali/plugins/tinymce/tinymce.min.js"></script>
    <script type="text/javascript">
 
-
-      $(document).on("click",".btnhapus",function(){
-			var id =$(this).attr("id");
+$(document).on("click",".btnhapus",function(){
+         var id =$(this).attr("id");
          var value = {
             		id: id
             };
@@ -25,7 +24,7 @@
 
                $.ajax(
                {
-                  url : "<?=base_url()?>admin/sdm/delete",
+                  url : "<?=base_url()?>admin/guru/delete",
                   type: "POST",
                   data : value,
                   success: function(data, textStatus, jqXHR)
@@ -33,7 +32,7 @@
                      var data = jQuery.parseJSON(data);
                         if(data.result ==1){
 
-                           window.location= '<?=base_url()?>admin/sdm/';
+                           window.location= '<?=base_url()?>admin/guru/';
                            alerthapus();
 
                         }else{

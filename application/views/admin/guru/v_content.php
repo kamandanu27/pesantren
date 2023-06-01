@@ -13,7 +13,7 @@
     <div class="col-md-12">
       <div class="tile">
         <div class="tile-title-w-btn">
-          <p><a href="<?= base_url(); ?>admin/sdm/add" class="btn btn-primary icon-btn"><i class="fa fa-plus"></i>Tambah Data</a></p>
+          <p><a href="<?= base_url(); ?>admin/guru/add" class="btn btn-primary icon-btn"><i class="fa fa-plus"></i>Tambah Data</a></p>
         </div>
         <div class="tile-body">
           <div class="table-responsive">
@@ -22,32 +22,31 @@
                 <tr>
                   <th>No</th>
                   <th>Foto</th>
-                  <th>NIK</th>
                   <th>Nama</th>
-                  <th>Jabatan</th>
-                  <th>Status</th>
+                  <th>Nip</th>
+                  <th>Alamat</th>
+                  <th>No. Telp</th>
+                  <th>Username</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
               <?php $no=1; foreach($data as $row){
-              if($row->aktif == 0){
-                $status = 'Aktif';
-              }else{
-                $status = 'Tidak Aktif';
-              }
+              
               ?>
-                <tr <?php if($status == 'Tidak Aktif'){ echo 'style="color: red;"';} ?>>
+                <tr>
                   <td><?= $no++ ?></td>
-                  <td><img src="<?= base_url()?>/public/image/upload/gurustaf/<?= $row->foto_gurustaf ?>" style="width: 80px; height: 100px;"></td>
-                  <td><?= $row->nik ?></td>
-                  <td><?= $row->nama ?></td>
-                  <td><?= $row->jabatan ?></td>
-                  <td><?= $status ?></td>
+                  <td><img src="<?= base_url()?>/public/image/upload/guru/<?= $row->foto_guru ?>" style="width: 80px; height: 100px;"></td>
+                  <td><?= $row->nama_guru ?></td>
+                  <td><?= $row->nip_guru ?></td>
+                  <td><?= $row->alamat_guru ?></td>
+                  <td><?= $row->notlp_guru ?></td>
+                  <td><?= $row->username_guru ?></td>
+                  
                   <td>
-                      <a href="<?= base_url(); ?>admin/sdm/edit/<?= $row->id_gurustaf ?>" type="submit" class="btn btn-warning btn-sm" id="<?= $row->id_gurustaf ?>"><i class="fa fa-edit"></i></a>
+                      <a href="<?= base_url(); ?>admin/guru/edit/<?= $row->id_guru ?>" type="submit" class="btn btn-warning btn-sm" id="<?= $row->id_guru ?>"><i class="fa fa-edit"></i></a>
 
-                      <a type="submit" class="btn btn-sm btn-danger btnhapus" id="<?= $row->id_gurustaf ?>"><i class="fa fa-trash"></i></a>
+                      <a type="submit" class="btn btn-sm btn-danger btnhapus" id="<?= $row->id_guru ?>"><i class="fa fa-trash"></i></a>
                     
                   </td>
                 </tr>
@@ -65,10 +64,10 @@
   <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Tambah gurustaf</h5>
+        <h5 class="modal-title">Tambah guru</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
       </div>
-      <form action="<?= base_url() ?>admin/gurustaf/insert" method="post"> 
+      <form action="<?= base_url() ?>admin/guru/insert" method="post"> 
         <div class="modal-body">
           <div class="form-group">
             <label class="control-label">Jenis</label>
@@ -80,8 +79,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label class="control-label">gurustaf Usaha</label>
-            <input class="form-control" type="text" id="nama_gurustaf" name="nama_gurustaf" placeholder="" required>
+            <label class="control-label">Guru Usaha</label>
+            <input class="form-control" type="text" id="nama_guru" name="nama_guru" placeholder="" required>
           </div>
         </div>
         <div class="modal-footer">
@@ -97,12 +96,12 @@
   <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Edit gurustaf</h5>
+        <h5 class="modal-title">Edit Guru</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
       </div>
-      <form action="<?= base_url() ?>admin/gurustaf/update" method="post"> 
+      <form action="<?= base_url() ?>admin/guru/update" method="post"> 
         <div class="modal-body">
-          <div id="d_gurustaf">
+          <div id="id_guru">
 
           </div>
         </div>

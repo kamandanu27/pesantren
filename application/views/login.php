@@ -16,7 +16,7 @@
     </section>
     <section class="login-content">
       <div class="text-center">
-        <h3 style="color: white;"><?= $data['title'] ?></h3>
+        <h3 style="color: white;"><?= $data['nama_identitas'] ?></h3>
       </div>
       <div class="login-box">
         <form class="login-form" form action="<?= base_url() ?>login/login" method="post">

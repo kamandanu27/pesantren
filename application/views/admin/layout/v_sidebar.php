@@ -19,6 +19,7 @@
           <ul class="treeview-menu">
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/identitas"><i class="icon fa fa-circle-o"></i> Identitas Sekolah</a></li>
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/kepalasekolah"><i class="icon fa fa-circle-o"></i> Kepala Sekolah</a></li>
+            <li><a class="treeview-item" href="<?= base_url(); ?>admin/guru"><i class="icon fa fa-circle-o"></i> Guru</a></li>
           </ul>
         </li>
       <?php
