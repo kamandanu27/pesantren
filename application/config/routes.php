@@ -49,46 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'home';
-$route['administrator']='admin/login';
+$route['default_controller'] = 'login';
 
-$route['artikel']='blog/artikel';
-$route['artikel/(:any)']='blog/detail_artikel/$1';
-
-$route['berita']='blog/berita';
-$route['berita/(:any)']='blog/detail_berita/$1';
-
-$route['kompetensi']='kompetensi/index';
-$route['kompetensi/(:any)']='kompetensi/index/$1';
-
-$route['admin/artikel/handleimage']='admin/artikel/handleimage';
-$route['admin/artikel/add']='admin/artikel/add';
-$route['admin/artikel/editp/(:any)']='admin/artikel/editp/$1';
-$route['admin/artikel/insert']='admin/artikel/insert';
-$route['admin/artikel/update']='admin/artikel/update';
-$route['admin/artikel/update_publis_user']='admin/artikel/update_publis_user';
-$route['admin/artikel/delete']='admin/artikel/delete';
-$route['admin/artikel/update_status']='admin/artikel/update_status';
-$route['admin/artikel/deletesoft']='admin/artikel/deletesoft';
-
-$route['admin/artikel']='admin/artikel/add';
-$route['admin/artikel/(:any)']='admin/artikel/view/$1';
-
-$route['admin/berita/add']='admin/berita/add';
-$route['admin/berita/editp/(:any)']='admin/berita/editp/$1';
-$route['admin/berita/insert']='admin/berita/insert';
-$route['admin/berita/update']='admin/berita/update';
-$route['admin/berita/update_publis_user']='admin/berita/update_publis_user';
-$route['admin/berita/delete']='admin/berita/delete';
-$route['admin/berita/update_status']='admin/berita/update_status';
-$route['admin/berita/deletesoft']='admin/berita/deletesoft';
-
-$route['admin/berita']='admin/berita/add';
-$route['admin/berita/(:any)']='admin/berita/view/$1';
-
-$route['album']='album/index';
-$route['album/(:any)']='album/index/$1';
-$route['visi-dan-misi']='visimisi';
-$route['tujuan-target-pendidikan'] = 'tujuan';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
