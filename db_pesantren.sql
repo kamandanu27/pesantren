@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 01, 2023 at 05:00 AM
+-- Generation Time: Jun 01, 2023 at 10:18 AM
 -- Server version: 8.0.30
 -- PHP Version: 7.4.19
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_pesantren`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_guru`
+--
+
+CREATE TABLE `tbl_guru` (
+  `id_guru` int NOT NULL,
+  `nama_guru` varchar(250) NOT NULL,
+  `nip_guru` varchar(250) NOT NULL,
+  `alamat_guru` varchar(250) NOT NULL,
+  `notlp_guru` varchar(250) NOT NULL,
+  `username_guru` varchar(250) NOT NULL,
+  `password_guru` varchar(250) NOT NULL,
+  `foto_guru` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tbl_guru`
+--
+
+INSERT INTO `tbl_guru` (`id_guru`, `nama_guru`, `nip_guru`, `alamat_guru`, `notlp_guru`, `username_guru`, `password_guru`, `foto_guru`) VALUES
+(4, 'alvin', '123', 'sumber', '678', 'alvin@gmail.com', '9e1f505e74ca9864c9132ba05e0670d85ff56fe5', '1685613125-download.jpg');
 
 -- --------------------------------------------------------
 
@@ -50,7 +74,27 @@ CREATE TABLE `tbl_identitas` (
 --
 
 INSERT INTO `tbl_identitas` (`id_identitas`, `noijin_identitas`, `nama_identitas`, `alamat_identitas`, `rt_identitas`, `rw_identitas`, `telp_identitas`, `kelurahan_identitas`, `kecamatan_identitas`, `provinsi_identitas`, `email_identitas`, `fb_identitas`, `twitter_identitas`, `instagram_identitas`, `logo_identitas`) VALUES
-(1, '12345', 'YAYASAN 1 PONDOK PESANTREN AL QUR’ANIYAH', 'JL. Sumur Pondok. NO 38 Ds. Dukuhjati Kec. Krangkeng', '03', '05', '082321755977', 'Kejaksan', 'Kejaksan 1', 'Jawa Barat', 'https://youtube/media quraniyah', 'https://web.facebook.com/mediaquraniyah', 'https://www.tiktok.com/@mediaquraniyah', 'https://www.instagram.com/mediaquraniyah/', '1685595509-download.jpg');
+(1, '12345', 'YAYASAN 1 PONDOK PESANTREN AL QUR’ANIYAH', 'JL. Sumur Pondok. NO 38 Ds. Dukuhjati Kec. Krangkeng', '2', '6', '082321755977', 'Kejaksan', 'Kejaksan 1', 'Jawa Barat', 'https://youtube/media quraniyah', 'https://web.facebook.com/mediaquraniyah', 'https://www.tiktok.com/@mediaquraniyah', 'https://www.instagram.com/mediaquraniyah/', '1685595509-download.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_kepalasekolah`
+--
+
+CREATE TABLE `tbl_kepalasekolah` (
+  `id_kepalasekolah` int NOT NULL,
+  `nama_kepalasekolah` varchar(250) NOT NULL,
+  `nip_kepalasekolah` varchar(250) NOT NULL,
+  `logo_kepalasekolah` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tbl_kepalasekolah`
+--
+
+INSERT INTO `tbl_kepalasekolah` (`id_kepalasekolah`, `nama_kepalasekolah`, `nip_kepalasekolah`, `logo_kepalasekolah`) VALUES
+(1, 'Alvin', '67566', '1685597852-download.jpg');
 
 -- --------------------------------------------------------
 
@@ -83,6 +127,12 @@ INSERT INTO `tbl_user` (`id_user`, `name_user`, `username`, `password`, `level_u
 --
 
 --
+-- Indexes for table `tbl_guru`
+--
+ALTER TABLE `tbl_guru`
+  ADD PRIMARY KEY (`id_guru`);
+
+--
 -- Indexes for table `tbl_identitas`
 --
 ALTER TABLE `tbl_identitas`
@@ -97,6 +147,12 @@ ALTER TABLE `tbl_user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `tbl_guru`
+--
+ALTER TABLE `tbl_guru`
+  MODIFY `id_guru` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_identitas`
