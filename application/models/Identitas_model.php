@@ -13,7 +13,7 @@ class Identitas_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('tbl_identitas');
-		$this->db->where('id', 1);
+		$this->db->where('id_identitas', 1);
 		$query = $this->db->get();
 		return $query;
 	}
@@ -21,7 +21,7 @@ class Identitas_model extends CI_Model {
 
 	public function update($data)
 	{
-		$this->db->where('id', $data['id']);
+		$this->db->where('id_identitas', $data['id_identitas']);
 		$this->db->update('tbl_identitas', $data);
 	}
 

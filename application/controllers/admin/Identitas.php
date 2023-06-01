@@ -30,7 +30,7 @@ class Identitas extends CI_Controller {
 
 	public function update()
 	{
-		$valid = $this->form_validation->set_rules('id','title','required|trim'); 
+		$valid = $this->form_validation->set_rules('id_identitas','nama_identitas','required|trim'); 
 
 		if($valid->run()==false){
 				$this->session->set_flashdata('flash', 'Eror Tidak ada');
@@ -44,14 +44,20 @@ class Identitas extends CI_Controller {
 				redirect(base_url('admin/identitas'),'refresh');
 			}else{
 					$data = array(
-						'id'				=> $this->input->post('id'),
-						'title'				=> $this->input->post('title'),
-						'alamat'			=> $this->input->post('alamat'),
-						'telp'				=> $this->input->post('telp'),
-						'email'				=> $this->input->post('email'),
-						'fb'				=> $this->input->post('fb'),
-						'twitter'			=> $this->input->post('twitter'),
-						'instagram'			=> $this->input->post('instagram')
+						'id_identitas'				=> $this->input->post('id_identitas'),
+						'noijin_identitas'				=> $this->input->post('noijin_identitas'),
+						'nama_identitas'				=> $this->input->post('nama_identitas'),
+						'alamat_identitas'			=> $this->input->post('alamat_identitas'),
+						'rt_identitas'				=> $this->input->post('rt_identitas'),
+						'rw_identitas'				=> $this->input->post('rw_identitas'),
+						'telp_identitas'				=> $this->input->post('telp_identitas'),
+						'kelurahan_identitas'				=> $this->input->post('kelurahan_identitas'),
+						'kecamatan_identitas'				=> $this->input->post('kecamatan_identitas'),
+						'provinsi_identitas'				=> $this->input->post('provinsi_identitas'),
+						'email_identitas'				=> $this->input->post('email_identitas'),
+						'fb_identitas'				=> $this->input->post('fb_identitas'),
+						'twitter_identitas'			=> $this->input->post('twitter_identitas'),
+						'instagram_identitas'			=> $this->input->post('instagram_identitas')
 					);
 					$sql = $this->identitas->update($data);
 
@@ -69,33 +75,14 @@ class Identitas extends CI_Controller {
 					$this->upload->do_upload('upload_data');
 		
 					$data = array(
-						'id'				=> $this->input->post('id'),
-						'logo'				=> $image
+						'id_identitas'				=> $this->input->post('id_identitas'),
+						'logo_identitas'				=> $image
 					);
 					$sql = $this->identitas->update($data);
 					
 				}
 
-				if($_FILES["upload_data1"]['name'] !== ""){
-					$nama1 = str_replace("_","",$_FILES["upload_data1"]['name']);
-					$nama2 = str_replace(" ","",$nama1);
-
-					$image 								= time().'-'.$nama2;
-					$config['upload_path'] 				= './public/image/upload/logo/';
-					$config['allowed_types'] 			= 'gif|jpg|png|jpeg';
-					$config['max_size']  				= '240000';
-					$config['file_name']  				= $image;
-
-					$this->load->library('upload', $config);
-					$this->upload->do_upload('upload_data1');
-		
-					$data = array(
-						'id'				=> $this->input->post('id'),
-						'logo_panjang'		=> $image
-					);
-					$sql = $this->identitas->update($data);
-					
-				}
+				
 
 					
 					if($sql == null){
