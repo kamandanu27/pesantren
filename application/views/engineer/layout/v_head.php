@@ -1,6 +1,4 @@
-<?php  
-$data_admin = $this->public_model->get_admin($this->session->userdata('id_admin'));
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

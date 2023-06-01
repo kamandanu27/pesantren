@@ -7,7 +7,6 @@ class Login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Identitas_model', 'identitas');
-		$this->load->model('Admin_model', 'admin');
 		$this->load->model('User_model', 'user');
 		ob_start();
 	}

@@ -9,15 +9,6 @@ class Public_model extends CI_Model {
 		$this->load->database();
 	}	
 
-	public function get_admin($id_admin)
-	{
-		$this->db->select('*');
-		$this->db->from('tbl_admin');
-		$this->db->where('id_admin', $id_admin);
-		$query = $this->db->get();
-		return $query->row();
-	}
-
 	public function get_user($id_user)
 	{
 		$this->db->select('*');
