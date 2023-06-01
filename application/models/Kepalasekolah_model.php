@@ -13,7 +13,7 @@ class Kepalasekolah_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('tbl_kepalasekolah');
-		$this->db->where('id', 1);
+		$this->db->where('id_kepalasekolah', 1);
 		$query = $this->db->get();
 		return $query;
 	}
@@ -21,7 +21,7 @@ class Kepalasekolah_model extends CI_Model {
 
 	public function update($data)
 	{
-		$this->db->where('id', $data['id']);
+		$this->db->where('id_kepalasekolah', $data['id_kepalasekolah']);
 		$this->db->update('tbl_kepalasekolah', $data);
 	}
 
