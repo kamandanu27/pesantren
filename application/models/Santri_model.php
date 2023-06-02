@@ -48,5 +48,5 @@ class Santri_model extends CI_Model {
 
 }
 
-/* End of file santri_model.php */
-/* Location: ./application/models/santri_model.php */
+/* End of file Santri_model.php */
+/* Location: ./application/models/Santri_model.php */

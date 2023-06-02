@@ -24,7 +24,7 @@ $(document).on("click",".btnhapus",function(){
 
                $.ajax(
                {
-                  url : "<?=base_url()?>admin/santri/delete",
+                  url : "<?=base_url()?>admin/kelas/delete",
                   type: "POST",
                   data : value,
                   success: function(data, textStatus, jqXHR)
@@ -32,7 +32,7 @@ $(document).on("click",".btnhapus",function(){
                      var data = jQuery.parseJSON(data);
                         if(data.result ==1){
 
-                           window.location= '<?=base_url()?>admin/santri/';
+                           window.location= '<?=base_url()?>admin/kelas/';
                            alerthapus();
 
                         }else{

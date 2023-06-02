@@ -1,6 +1,6 @@
 
   <aside class="app-sidebar">
-      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="<?= base_url() ?>public/image/upload/gurustaf/<?= $this->session->userdata('foto_user'); ?>" alt="User Image" style="width: 50px; heigth: 75px;">
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="<?= base_url() ?>public/image/upload/guru/<?= $this->session->userdata('foto_user'); ?>" alt="User Image" style="width: 50px; heigth: 75px;">
         <div>
           <p class="app-sidebar__user-name"><?= $this->session->userdata('name_user'); ?></p>
           <p class="app-sidebar__user-designation"><?= $this->session->userdata('level_user'); ?></p>
@@ -21,6 +21,7 @@
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/kepalasekolah"><i class="icon fa fa-circle-o"></i> Kepala Sekolah</a></li>
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/guru"><i class="icon fa fa-circle-o"></i> Guru</a></li>
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/santri"><i class="icon fa fa-circle-o"></i> Santri</a></li>
+            <li><a class="treeview-item" href="<?= base_url(); ?>admin/kelas"><i class="icon fa fa-circle-o"></i> Kelas</a></li>
           </ul>
         </li>
       <?php
