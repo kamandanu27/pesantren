@@ -15,7 +15,7 @@
           <form action="<?php echo base_url().'admin/kelas/update'?>" method="post" enctype="multipart/form-data">
             <div class="tile-body">
               <div class="form-group row">
-                <label class="control-label col-md-3">Nama</label>
+                <label class="control-label col-md-3">Nama Kelas</label>
                 <div class="col-md-3">
                   <input class="form-control" type="text" id="nama_kelas" name="nama_kelas" value="<?= $data['nama_kelas'] ?>" required>
                   <input class="form-control" type="hidden" id="id_kelas" name="id_kelas" value="<?= $data['id_kelas'] ?>" required>

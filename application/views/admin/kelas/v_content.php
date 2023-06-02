@@ -21,7 +21,8 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama</th>
+                  <th>Nama Kelas</th>
+                  <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
