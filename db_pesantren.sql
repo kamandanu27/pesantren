@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 01, 2023 at 10:18 AM
+-- Generation Time: Jun 02, 2023 at 08:37 AM
 -- Server version: 8.0.30
 -- PHP Version: 7.4.19
 
@@ -79,6 +79,25 @@ INSERT INTO `tbl_identitas` (`id_identitas`, `noijin_identitas`, `nama_identitas
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_kelas`
+--
+
+CREATE TABLE `tbl_kelas` (
+  `id_kelas` int NOT NULL,
+  `nama_kelas` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tbl_kelas`
+--
+
+INSERT INTO `tbl_kelas` (`id_kelas`, `nama_kelas`) VALUES
+(3, '35'),
+(4, '12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_kepalasekolah`
 --
 
@@ -95,6 +114,30 @@ CREATE TABLE `tbl_kepalasekolah` (
 
 INSERT INTO `tbl_kepalasekolah` (`id_kepalasekolah`, `nama_kepalasekolah`, `nip_kepalasekolah`, `logo_kepalasekolah`) VALUES
 (1, 'Alvin', '67566', '1685597852-download.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_santri`
+--
+
+CREATE TABLE `tbl_santri` (
+  `id_santri` int NOT NULL,
+  `nama_santri` varchar(250) NOT NULL,
+  `nis_santri` varchar(250) NOT NULL,
+  `alamat_santri` varchar(250) NOT NULL,
+  `notlp_santri` varchar(250) NOT NULL,
+  `username_santri` varchar(250) NOT NULL,
+  `password_santri` varchar(250) NOT NULL,
+  `foto_santri` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tbl_santri`
+--
+
+INSERT INTO `tbl_santri` (`id_santri`, `nama_santri`, `nis_santri`, `alamat_santri`, `notlp_santri`, `username_santri`, `password_santri`, `foto_santri`) VALUES
+(1, 'alvin', '234', 'cbc', '0897696', 'admin', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', '1685674818-download.jpg');
 
 -- --------------------------------------------------------
 
@@ -139,6 +182,18 @@ ALTER TABLE `tbl_identitas`
   ADD PRIMARY KEY (`id_identitas`);
 
 --
+-- Indexes for table `tbl_kelas`
+--
+ALTER TABLE `tbl_kelas`
+  ADD PRIMARY KEY (`id_kelas`);
+
+--
+-- Indexes for table `tbl_santri`
+--
+ALTER TABLE `tbl_santri`
+  ADD PRIMARY KEY (`id_santri`);
+
+--
 -- Indexes for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
@@ -159,6 +214,18 @@ ALTER TABLE `tbl_guru`
 --
 ALTER TABLE `tbl_identitas`
   MODIFY `id_identitas` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_kelas`
+--
+ALTER TABLE `tbl_kelas`
+  MODIFY `id_kelas` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tbl_santri`
+--
+ALTER TABLE `tbl_santri`
+  MODIFY `id_santri` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
