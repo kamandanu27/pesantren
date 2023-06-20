@@ -19,11 +19,10 @@ class Auth_a {
 		{
 			$data = [
 				'id_user'			=> $check->id_user,
-				'name_user'			=> $check->name_user,
+				'nama_user'			=> $check->nama_user,
 				'username'			=> $check->username,
 				'password'			=> $check->password,
 				'level_user'		=> $check->level_user,
-				'foto_user'			=> $check->foto_user,
 				'login'	=> true
 			];
 			$this->CI->session->set_userdata($data);

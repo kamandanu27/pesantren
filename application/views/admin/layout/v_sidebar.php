@@ -22,6 +22,9 @@
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/guru"><i class="icon fa fa-circle-o"></i> Guru</a></li>
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/santri"><i class="icon fa fa-circle-o"></i> Santri</a></li>
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/kelas"><i class="icon fa fa-circle-o"></i> Kelas</a></li>
+            <li><a class="treeview-item" href="<?= base_url(); ?>admin/user"><i class="icon fa fa-circle-o"></i> User</a></li>
+            <li><a class="treeview-item" href="<?= base_url(); ?>admin/juz"><i class="icon fa fa-circle-o"></i> Juz</a></li>
+            <li><a class="treeview-item" href="<?= base_url(); ?>admin/surat"><i class="icon fa fa-circle-o"></i> Surat</a></li>
           </ul>
         </li>
       <?php

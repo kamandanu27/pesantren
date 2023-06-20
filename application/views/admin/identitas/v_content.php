@@ -16,13 +16,13 @@
             <div class="tile-body">
               <div class="form-group row">
                 <label class="control-label col-md-3">No. Izin</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="noijin_identitas" name="noijin_identitas" value="<?= $data['noijin_identitas'] ?>" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Nama Sekolah</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="nama_identitas" name="nama_identitas" value="<?= $data['nama_identitas'] ?>" required>
                   <input class="form-control" type="hidden" id="id_identitas" name="id_identitas" value="<?= $data['id_identitas'] ?>">
                   <input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>" style="display: none">
@@ -48,7 +48,7 @@
               </div>
               <div class="form-group row">
                   <label class="control-label col-md-3">No. Telp</label>
-                  <div class="col-md-4">
+                  <div class="col-md-8">
                     <input class="form-control" type="text" id="telp_identitas" name="telp_identitas" value="<?= $data['telp_identitas'] ?>">
                   </div>
               </div>
@@ -72,31 +72,31 @@
               </div>
               <div class="form-group row">
                   <label class="control-label col-md-3">Youtube</label>
-                  <div class="col-md-6">
+                  <div class="col-md-8">
                     <input class="form-control" type="text" id="email_identitas" name="email_identitas" value="<?= $data['email_identitas'] ?>">
                   </div>
               </div>
               <div class="form-group row">
                   <label class="control-label col-md-3">Facebook</label>
-                  <div class="col-md-6">
+                  <div class="col-md-8">
                     <input class="form-control" type="text" id="fb_identitas" name="fb_identitas" value="<?= $data['fb_identitas'] ?>">
                   </div>
               </div>
               <div class="form-group row">
                   <label class="control-label col-md-3">Tiktok</label>
-                  <div class="col-md-6">
+                  <div class="col-md-8">
                     <input class="form-control" type="text" id="twitter_identitas" name="twitter_identitas" value="<?= $data['twitter_identitas'] ?>">
                   </div>
               </div>
               <div class="form-group row">
                   <label class="control-label col-md-3">Instagram</label>
-                  <div class="col-md-6">
+                  <div class="col-md-8">
                     <input class="form-control" type="text" id="instagram_identitas" name="instagram_identitas" value="<?= $data['instagram_identitas'] ?>">
                   </div>
               </div>
               <div class="form-group row">
                   <label class="control-label col-md-3">Logo</label>
-                  <div class="col-md-6">
+                  <div class="col-md-8">
                     <img src="<?= base_url() ?>public/image/upload/logo/<?= $data['logo_identitas'] ?>" style="width: 100px;">
                     <br>
                     <input class="form-control" type="file" id="upload_data" name="upload_data">
