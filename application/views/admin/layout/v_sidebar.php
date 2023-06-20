@@ -2,7 +2,7 @@
   <aside class="app-sidebar">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="<?= base_url() ?>public/image/upload/guru/<?= $this->session->userdata('foto_user'); ?>" alt="User Image" style="width: 50px; heigth: 75px;">
         <div>
-          <p class="app-sidebar__user-name"><?= $this->session->userdata('name_user'); ?></p>
+          <p class="app-sidebar__user-nama"><?= $this->session->userdata('nama_user'); ?></p>
           <p class="app-sidebar__user-designation"><?= $this->session->userdata('level_user'); ?></p>
         </div>
       </div>
