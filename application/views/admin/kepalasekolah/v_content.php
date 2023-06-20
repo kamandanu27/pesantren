@@ -17,7 +17,7 @@
               
               <div class="form-group row">
                 <label class="control-label col-md-3">Nama Kepala Sekolah</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="nama_kepalasekolah" name="nama_kepalasekolah" value="<?= $data['nama_kepalasekolah'] ?>" required>
                   <input class="form-control" type="hidden" id="id_kepalasekolah" name="id_kepalasekolah" value="<?= $data['id_kepalasekolah'] ?>">
                   <input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>" style="display: none">
@@ -33,7 +33,7 @@
 
               <div class="form-group row">
                   <label class="control-label col-md-3">Logo</label>
-                  <div class="col-md-6">
+                  <div class="col-md-8">
                     <img src="<?= base_url() ?>public/image/upload/logo/<?= $data['logo_kepalasekolah'] ?>" style="width: 100px;">
                     <br>
                     <input class="form-control" type="file" id="upload_data" name="upload_data">

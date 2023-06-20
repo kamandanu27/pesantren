@@ -14,8 +14,8 @@ class Kelas extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-			'title'			=> 'Admin - Sumber Daya Manusia',
-			'judul'			=> 'Sumber Daya Manusia',
+			'title'			=> 'Admin - Kelas',
+			'judul'			=> 'Kelas',
 			'data' 			=> $this->kelas->tabel(),
 			'content'		=> 'admin/kelas/v_content',
 			'ajax'	 		=> 'admin/kelas/v_ajax'
@@ -26,8 +26,8 @@ class Kelas extends CI_Controller {
 	public function add()
 	{
 		$data = array(
-			'title'			=> 'Admin - Tambah Sumber Daya Manusia',
-			'judul'			=> 'Tambah Sumber Daya Manusia',
+			'title'			=> 'Admin - Tambah Kelas',
+			'judul'			=> 'Tambah Kelas',
 			'data' 			=> $this->kelas->tabel(),
 			'content'		=> 'admin/kelas/v_add',
 			'ajax'	 		=> 'admin/kelas/v_ajax'
@@ -45,8 +45,8 @@ class Kelas extends CI_Controller {
 		}else{
 
 			$data = array(
-				'title'			=> 'Admin - Edit Sumber Daya Manusia',
-				'judul'			=> 'Edit Sumber Daya Manusia',
+				'title'			=> 'Admin - Edit Kelas',
+				'judul'			=> 'Edit Kelas',
 				'data' 			=> 	$this->kelas->detail($id)->row_array(),
 				'content'		=> 'admin/kelas/v_edit',
 				'ajax'	 		=> 'admin/kelas/v_ajax'

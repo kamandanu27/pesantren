@@ -14,8 +14,8 @@ class Guru extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-			'title'			=> 'Admin - Sumber Daya Manusia',
-			'judul'			=> 'Sumber Daya Manusia',
+			'title'			=> 'Admin - Guru',
+			'judul'			=> 'Guru',
 			'data' 			=> $this->guru->tabel(),
 			'content'		=> 'admin/guru/v_content',
 			'ajax'	 		=> 'admin/guru/v_ajax'
@@ -26,8 +26,8 @@ class Guru extends CI_Controller {
 	public function add()
 	{
 		$data = array(
-			'title'			=> 'Admin - Tambah Sumber Daya Manusia',
-			'judul'			=> 'Tambah Sumber Daya Manusia',
+			'title'			=> 'Admin - Tambah Guru',
+			'judul'			=> 'Tambah Guru',
 			'data' 			=> $this->guru->tabel(),
 			'content'		=> 'admin/guru/v_add',
 			'ajax'	 		=> 'admin/guru/v_ajax'
@@ -45,8 +45,8 @@ class Guru extends CI_Controller {
 		}else{
 
 			$data = array(
-				'title'			=> 'Admin - Edit Sumber Daya Manusia',
-				'judul'			=> 'Edit Sumber Daya Manusia',
+				'title'			=> 'Admin - Edit Guru',
+				'judul'			=> 'Edit Guru',
 				'data' 			=> 	$this->guru->detail($id)->row_array(),
 				'content'		=> 'admin/guru/v_edit',
 				'ajax'	 		=> 'admin/guru/v_ajax'

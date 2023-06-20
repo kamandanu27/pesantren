@@ -16,44 +16,44 @@
             <div class="tile-body">
               <div class="form-group row">
                 <label class="control-label col-md-3">Nama Guru</label>
-                <div class="col-md-3">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="nama_guru" name="nama_guru" value="" required>
                   <input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>" style="display: none">
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Nip</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="nip_guru" name="nip_guru" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Alamat</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="alamat_guru" name="alamat_guru" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">No. Telp</label>
-                <div class="col-md-4">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="notlp_guru" name="notlp_guru" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Username</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="username_guru" name="username_guru" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Password</label>
-                <div class="col-md-4">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="password_guru" name="password_guru" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Foto</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="file" id="foto_guru" name="foto_guru" value="" required>
                 </div>
               </div>

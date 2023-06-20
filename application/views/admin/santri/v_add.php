@@ -16,44 +16,44 @@
             <div class="tile-body">
               <div class="form-group row">
                 <label class="control-label col-md-3">Nama Santri</label>
-                <div class="col-md-3">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="nama_santri" name="nama_santri" value="" required>
                   <input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>" style="display: none">
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Nis</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="nis_santri" name="nis_santri" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Alamat</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="alamat_santri" name="alamat_santri" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">No. Telp</label>
-                <div class="col-md-4">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="notlp_santri" name="notlp_santri" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Username</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="username_santri" name="username_santri" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Password</label>
-                <div class="col-md-4">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="password_santri" name="password_santri" value="" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label class="control-label col-md-3">Foto</label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                   <input class="form-control" type="file" id="foto_santri" name="foto_santri" value="" required>
                 </div>
               </div>

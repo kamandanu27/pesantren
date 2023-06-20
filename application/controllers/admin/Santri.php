@@ -14,8 +14,8 @@ class Santri extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-			'title'			=> 'Admin - Sumber Daya Manusia',
-			'judul'			=> 'Sumber Daya Manusia',
+			'title'			=> 'Admin - Santri',
+			'judul'			=> 'Santri',
 			'data' 			=> $this->santri->tabel(),
 			'content'		=> 'admin/santri/v_content',
 			'ajax'	 		=> 'admin/santri/v_ajax'
@@ -26,8 +26,8 @@ class Santri extends CI_Controller {
 	public function add()
 	{
 		$data = array(
-			'title'			=> 'Admin - Tambah Sumber Daya Manusia',
-			'judul'			=> 'Tambah Sumber Daya Manusia',
+			'title'			=> 'Admin - Tambah Santri',
+			'judul'			=> 'Tambah Santri',
 			'data' 			=> $this->santri->tabel(),
 			'content'		=> 'admin/santri/v_add',
 			'ajax'	 		=> 'admin/santri/v_ajax'
@@ -45,8 +45,8 @@ class Santri extends CI_Controller {
 		}else{
 
 			$data = array(
-				'title'			=> 'Admin - Edit Sumber Daya Manusia',
-				'judul'			=> 'Edit Sumber Daya Manusia',
+				'title'			=> 'Admin - Edit Santri',
+				'judul'			=> 'Edit Santri',
 				'data' 			=> 	$this->santri->detail($id)->row_array(),
 				'content'		=> 'admin/santri/v_edit',
 				'ajax'	 		=> 'admin/santri/v_ajax'
