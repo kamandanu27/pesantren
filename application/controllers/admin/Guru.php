@@ -73,12 +73,12 @@ class Guru extends CI_Controller {
 		if($_FILES["foto_guru"]['name'] == ""){
 			$data = array(
 				'id_guru'	=> $this->input->post('id_guru'),
-				'nama_guru'			=> $this->input->post('nama_guru'),
-				'nip_guru'			=> $this->input->post('nip_guru'),
-				'alamat_guru'		=> $this->input->post('alamat_guru'),
-				'notlp_guru'		=> $this->input->post('notlp_guru'),
+				'nama_guru'				=> $this->input->post('nama_guru'),
+				'nip_guru'				=> $this->input->post('nip_guru'),
+				'alamat_guru'			=> $this->input->post('alamat_guru'),
+				'notlp_guru'			=> $this->input->post('notlp_guru'),
 				'username_guru'			=> $this->input->post('username_guru'),
-				'password_guru'		=> sha1($this->input->post('password_guru'))
+				'password_guru'			=> sha1($this->input->post('password_guru'))
 			);
 
 
@@ -96,13 +96,13 @@ class Guru extends CI_Controller {
 
 			$data = array(
 				'id_guru'	=> $this->input->post('id_guru'),
-				'nama_guru'			=> $this->input->post('nama_guru'),
-				'nip_guru'			=> $this->input->post('nip_guru'),
-				'alamat_guru'		=> $this->input->post('alamat_guru'),
-				'notlp_guru'		=> $this->input->post('notlp_guru'),
+				'nama_guru'				=> $this->input->post('nama_guru'),
+				'nip_guru'				=> $this->input->post('nip_guru'),
+				'alamat_guru'			=> $this->input->post('alamat_guru'),
+				'notlp_guru'			=> $this->input->post('notlp_guru'),
 				'username_guru'			=> $this->input->post('username_guru'),
-				'password_guru'		=> sha1($this->input->post('password_guru')),
-				'foto_guru'		=> $image 
+				'password_guru'			=> sha1($this->input->post('password_guru')),
+				'foto_guru'				=> $image 
 			);
 
 		}
@@ -129,23 +129,23 @@ class Guru extends CI_Controller {
 
 				if($this->input->post('password') == "" ){
 					$data = array(
-						'id_guru'	=> $this->input->post('id_guru'),
-						'nama_guru'			=> $this->input->post('nama_guru'),
-						'nip_guru'			=> $this->input->post('nip_guru'),
-						'alamat_guru'		=> $this->input->post('alamat_guru'),
-						'notlp_guru'		=> $this->input->post('notlp_guru'),
+						'id_guru'				=> $this->input->post('id_guru'),
+						'nama_guru'				=> $this->input->post('nama_guru'),
+						'nip_guru'				=> $this->input->post('nip_guru'),
+						'alamat_guru'			=> $this->input->post('alamat_guru'),
+						'notlp_guru'			=> $this->input->post('notlp_guru'),
 						'username_guru'			=> $this->input->post('username_guru'),
 					);
 
 				}else{
 					$data = array(
-						'id_guru'	=> $this->input->post('id_guru'),
-						'nama_guru'			=> $this->input->post('nama_guru'),
-						'nip_guru'			=> $this->input->post('nip_guru'),
-						'alamat_guru'		=> $this->input->post('alamat_guru'),
-						'notlp_guru'		=> $this->input->post('notlp_guru'),
+						'id_guru'				=> $this->input->post('id_guru'),
+						'nama_guru'				=> $this->input->post('nama_guru'),
+						'nip_guru'				=> $this->input->post('nip_guru'),
+						'alamat_guru'			=> $this->input->post('alamat_guru'),
+						'notlp_guru'			=> $this->input->post('notlp_guru'),
 						'username_guru'			=> $this->input->post('username_guru'),
-						'password_guru'		=> sha1($this->input->post('password_guru'))
+						'password_guru'			=> sha1($this->input->post('password_guru'))
 					);
 
 				}
@@ -162,26 +162,26 @@ class Guru extends CI_Controller {
 
 				if($this->input->post('password') == "" ){
 					$data = array(
-						'id_guru'	=> $this->input->post('id_guru'),
-						'nama_guru'			=> $this->input->post('nama_guru'),
-						'nip_guru'			=> $this->input->post('nip_guru'),
-						'alamat_guru'		=> $this->input->post('alamat_guru'),
-						'notlp_guru'		=> $this->input->post('notlp_guru'),
+						'id_guru'				=> $this->input->post('id_guru'),
+						'nama_guru'				=> $this->input->post('nama_guru'),
+						'nip_guru'				=> $this->input->post('nip_guru'),
+						'alamat_guru'			=> $this->input->post('alamat_guru'),
+						'notlp_guru'			=> $this->input->post('notlp_guru'),
 						'username_guru'			=> $this->input->post('username_guru'),
-						'foto_guru'		=> $image 
+						'foto_guru'				=> $image 
 					);
 
 				}else{
 
 					$data = array(
-						'id_guru'	=> $this->input->post('id_guru'),
-						'nama_guru'			=> $this->input->post('nama_guru'),
-						'nip_guru'			=> $this->input->post('nip_guru'),
-						'alamat_guru'		=> $this->input->post('alamat_guru'),
-						'notlp_guru'		=> $this->input->post('notlp_guru'),
+						'id_guru'				=> $this->input->post('id_guru'),
+						'nama_guru'				=> $this->input->post('nama_guru'),
+						'nip_guru'				=> $this->input->post('nip_guru'),
+						'alamat_guru'			=> $this->input->post('alamat_guru'),
+						'notlp_guru'			=> $this->input->post('notlp_guru'),
 						'username_guru'			=> $this->input->post('username_guru'),
-						'password_guru'		=> sha1($this->input->post('password_guru')),
-						'foto_guru'		=> $image 
+						'password_guru'			=> sha1($this->input->post('password_guru')),
+						'foto_guru'				=> $image 
 					);
 
 				}

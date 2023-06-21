@@ -64,7 +64,7 @@ class Surat extends CI_Controller {
 			
 			$data = array(
 				'id_surat'				=> $this->input->post('id_surat'),
-				'nama_surat'				=> $this->input->post('nama_surat'),
+				'nama_surat'			=> $this->input->post('nama_surat'),
 				'id_juz'				=> $this->input->post('id_juz')
 				
 			);
@@ -87,7 +87,7 @@ class Surat extends CI_Controller {
 		}else{
 
 			$data = array(
-				'id_surat'	=> $this->input->post('id_surat'),
+				'id_surat'				=> $this->input->post('id_surat'),
 				'nama_surat'			=> $this->input->post('nama_surat'),
 				'id_juz'				=> $this->input->post('id_juz')
 				

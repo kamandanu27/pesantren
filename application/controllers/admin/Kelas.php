@@ -61,7 +61,7 @@ class Kelas extends CI_Controller {
 			
 			$data = array(
 				'id_kelas'				=> $this->input->post('id_kelas'),
-				'nama_kelas'				=> $this->input->post('nama_kelas')
+				'nama_kelas'			=> $this->input->post('nama_kelas')
 				
 			);
 
@@ -83,7 +83,7 @@ class Kelas extends CI_Controller {
 		}else{
 
 			$data = array(
-				'id_kelas'	=> $this->input->post('id_kelas'),
+				'id_kelas'				=> $this->input->post('id_kelas'),
 				'nama_kelas'			=> $this->input->post('nama_kelas'),
 				
 			);

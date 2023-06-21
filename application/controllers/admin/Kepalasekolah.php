@@ -45,8 +45,8 @@ class Kepalasekolah extends CI_Controller {
 			}else{
 					$data = array(
 						'id_kepalasekolah'				=> $this->input->post('id_kepalasekolah'),
-						'nama_kepalasekolah'				=> $this->input->post('nama_kepalasekolah'),
-						'nip_kepalasekolah'			=> $this->input->post('nip_kepalasekolah')
+						'nama_kepalasekolah'			=> $this->input->post('nama_kepalasekolah'),
+						'nip_kepalasekolah'				=> $this->input->post('nip_kepalasekolah')
 					);
 					$sql = $this->kepalasekolah->update($data);
 

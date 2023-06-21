@@ -72,13 +72,13 @@ class Santri extends CI_Controller {
 
 		if($_FILES["foto_santri"]['name'] == ""){
 			$data = array(
-				'id_santri'	=> $this->input->post('id_santri'),
-				'nama_santri'			=> $this->input->post('nama_santri'),
-				'nis_santri'			=> $this->input->post('nis_santri'),
-				'alamat_santri'		=> $this->input->post('alamat_santri'),
-				'notlp_santri'		=> $this->input->post('notlp_santri'),
+				'id_santri'					=> $this->input->post('id_santri'),
+				'nama_santri'				=> $this->input->post('nama_santri'),
+				'nis_santri'				=> $this->input->post('nis_santri'),
+				'alamat_santri'				=> $this->input->post('alamat_santri'),
+				'notlp_santri'				=> $this->input->post('notlp_santri'),
 				'username_santri'			=> $this->input->post('username_santri'),
-				'password_santri'		=> sha1($this->input->post('password_santri'))
+				'password_santri'			=> sha1($this->input->post('password_santri'))
 			);
 
 
@@ -95,14 +95,14 @@ class Santri extends CI_Controller {
 			$this->upload->do_upload('foto_santri');
 
 			$data = array(
-				'id_santri'	=> $this->input->post('id_santri'),
-				'nama_santri'			=> $this->input->post('nama_santri'),
-				'nis_santri'			=> $this->input->post('nis_santri'),
-				'alamat_santri'		=> $this->input->post('alamat_santri'),
-				'notlp_santri'		=> $this->input->post('notlp_santri'),
+				'id_santri'					=> $this->input->post('id_santri'),
+				'nama_santri'				=> $this->input->post('nama_santri'),
+				'nis_santri'				=> $this->input->post('nis_santri'),
+				'alamat_santri'				=> $this->input->post('alamat_santri'),
+				'notlp_santri'				=> $this->input->post('notlp_santri'),
 				'username_santri'			=> $this->input->post('username_santri'),
-				'password_santri'		=> sha1($this->input->post('password_santri')),
-				'foto_santri'		=> $image 
+				'password_santri'			=> sha1($this->input->post('password_santri')),
+				'foto_santri'				=> $image 
 			);
 
 		}
@@ -163,25 +163,25 @@ class Santri extends CI_Controller {
 				if($this->input->post('password') == "" ){
 					$data = array(
 						'id_santri'	=> $this->input->post('id_santri'),
-						'nama_santri'			=> $this->input->post('nama_santri'),
-						'nis_santri'			=> $this->input->post('nis_santri'),
-						'alamat_santri'		=> $this->input->post('alamat_santri'),
-						'notlp_santri'		=> $this->input->post('notlp_santri'),
+						'nama_santri'				=> $this->input->post('nama_santri'),
+						'nis_santri'				=> $this->input->post('nis_santri'),
+						'alamat_santri'				=> $this->input->post('alamat_santri'),
+						'notlp_santri'				=> $this->input->post('notlp_santri'),
 						'username_santri'			=> $this->input->post('username_santri'),
-						'foto_santri'		=> $image 
+						'foto_santri'				=> $image 
 					);
 
 				}else{
 
 					$data = array(
 						'id_santri'	=> $this->input->post('id_santri'),
-						'nama_santri'			=> $this->input->post('nama_santri'),
-						'nis_santri'			=> $this->input->post('nis_santri'),
-						'alamat_santri'		=> $this->input->post('alamat_santri'),
-						'notlp_santri'		=> $this->input->post('notlp_santri'),
+						'nama_santri'				=> $this->input->post('nama_santri'),
+						'nis_santri'				=> $this->input->post('nis_santri'),
+						'alamat_santri'				=> $this->input->post('alamat_santri'),
+						'notlp_santri'				=> $this->input->post('notlp_santri'),
 						'username_santri'			=> $this->input->post('username_santri'),
-						'password_santri'		=> sha1($this->input->post('password_santri')),
-						'foto_santri'		=> $image 
+						'password_santri'			=> sha1($this->input->post('password_santri')),
+						'foto_santri'				=> $image 
 					);
 
 				}

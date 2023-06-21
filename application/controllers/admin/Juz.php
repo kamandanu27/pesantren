@@ -83,7 +83,7 @@ class Juz extends CI_Controller {
 		}else{
 
 			$data = array(
-				'id_juz'	=> $this->input->post('id_juz'),
+				'id_juz'			=> $this->input->post('id_juz'),
 				'nama_juz'			=> $this->input->post('nama_juz')
 				
 			);
