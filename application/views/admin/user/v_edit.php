@@ -68,17 +68,19 @@
               <div class="form-group row">
                 <label class="control-label col-md-3">Password</label>
                 <div class="col-md-8">
-                  <input class="form-control" type="text" id="password" name="password" value="<?= $data['password'] ?>" required>
+                  <input class="form-control" type="password" id="password" name="password" value="">
                 </div>
               </div>
 
               <div class="form-group row">
-                    <label class="col-sm-3 col-form-label">Foto User</label>
+                    <label class="col-sm-3 col-form-label" for="exampleFormControlFoto1">Foto User</label>
                       <div class="input-group col-sm-8 col-md-8">
+                        <img src="<?= base_url() ?>/public/image/upload/user/<?= $data['foto_user'] ?>" style="width: 80px; height: 100px;">
                         <input type="file" class="form-control" id="foto_user" name="foto_user" id="exampleInputUpload Foto1">
                       </div>
               </div>
-
+             
+              
             </div>
 
             <div class="tile-footer">

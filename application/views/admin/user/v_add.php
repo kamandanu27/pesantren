@@ -67,7 +67,7 @@
               <div class="form-group row">
                   <label class="control-label col-md-3">Password</label>
                   <div class="col-md-8">
-                    <input class="form-control" type="text" id="password" name="password">
+                    <input class="form-control" type="password" id="password" name="password">
                   </div>
                 </div>
 

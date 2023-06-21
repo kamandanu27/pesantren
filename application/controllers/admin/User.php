@@ -96,6 +96,7 @@ class User extends CI_Controller {
 			redirect(base_url('admin/user'),'refresh');
 		}else{
 
+			
 			if($_FILES["foto_user"]['name'] !== ""){ //jika tidak ada upload foto
 
 				$image 								= time().'-'.$_FILES["foto_user"]['name']; //data post dari form
@@ -107,13 +108,13 @@ class User extends CI_Controller {
 				$this->load->library('upload', $config); //panggil librarys upload
 				$this->upload->do_upload('foto_user'); //upload foto produk
 
-			$data = array(
-				'id_user'					=> $this->input->post('id_user'),
-				'foto_user'					=> $image
-				
-			);
-			
-				$this->user->update($data);
+					$data = array(
+						'id_user'				=> $this->input->post('id_user'),
+						'foto_user'				=> $image
+
+					);
+					
+					$q = $this->user->update($data);
 			}
 
 			$data = array(
@@ -126,10 +127,10 @@ class User extends CI_Controller {
 				'level_user'				=> $this->input->post('level_user'),
 				'username'					=> $this->input->post('username'),
 				'password'					=> $this->input->post('password')
-
 			);
-	
-			$this->session->set_flashdata('flash', 'Update Berhasil');
+
+			$this->user->update($data);
+			$this->session->set_flashdata('success', '<i class="fa fa-check"></i> Selamat! Data Berhasil Dirubah');
 			redirect(base_url('admin/user'),'refresh');
 		}
 			
