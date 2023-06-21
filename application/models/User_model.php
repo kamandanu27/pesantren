@@ -7,17 +7,8 @@ class User_model extends CI_Model {
 	{
 		parent::__construct();
 		$this->load->database();
-	}	
-
-	public function tabel()
-	{
-		$this->db->select('*');
-		$this->db->from('tbl_user');
-		$this->db->order_by('id_user', 'Asc');
-		$query = $this->db->get();
-		return $query->result();
 	}
-
+	
 	public function detail($id_user)
 	{
 		$this->db->select('*');
@@ -63,6 +54,15 @@ class User_model extends CI_Model {
 		));
 		$query = $this->db->get();
 		return $query->row();
+	}
+
+	public function tabel()
+	{
+		$this->db->select('*');
+		$this->db->from('tbl_user');
+		$this->db->order_by('id_user', 'Asc');
+		$query = $this->db->get();
+		return $query->result();
 	}
 
 	public function insert($data)

@@ -58,7 +58,15 @@ class User extends CI_Controller {
 
 	public function insert()
 	{
-			
+			$image 								= time().'-'.$_FILES["foto_user"]['name']; //data post dari form
+			$config['upload_path'] 				= './public/image/upload/user/'; //lokasi folder foto produk
+			$config['allowed_types'] 			= 'gif|jpg|png|jpeg'; //jenis file yang boleh diijinkan
+			$config['max_size']  				= '25000'; //maksimal 25Mb
+			$config['file_name']  				= $image; //ubah nama file berdasarkan waktu
+
+			$this->load->library('upload', $config); //panggil librarys upload
+			$this->upload->do_upload('foto_user'); //upload foto produk
+
 			$data = array(
 				'nama_user'					=> $this->input->post('nama_user'),
 				'alamat_user'				=> $this->input->post('alamat_user'),
@@ -67,7 +75,8 @@ class User extends CI_Controller {
 				'instansi_user'				=> $this->input->post('instansi_user'),
 				'level_user'				=> $this->input->post('level_user'),
 				'username'					=> $this->input->post('username'),
-				'password'					=> $this->input->post('password')
+				'password'					=> $this->input->post('password'),
+				'foto_user'					=> $image
 			);
 
 			$q = $this->user->insert($data);
@@ -87,6 +96,26 @@ class User extends CI_Controller {
 			redirect(base_url('admin/user'),'refresh');
 		}else{
 
+			if($_FILES["foto_user"]['name'] !== ""){ //jika tidak ada upload foto
+
+				$image 								= time().'-'.$_FILES["foto_user"]['name']; //data post dari form
+				$config['upload_path'] 				= './public/image/upload/user/'; //lokasi folder foto produk
+				$config['allowed_types'] 			= 'gif|jpg|png|jpeg'; //jenis file yang boleh diijinkan
+				$config['max_size']  				= '25000'; //maksimal 25Mb
+				$config['file_name']  				= $image; //ubah nama file berdasarkan waktu
+
+				$this->load->library('upload', $config); //panggil librarys upload
+				$this->upload->do_upload('foto_user'); //upload foto produk
+
+			$data = array(
+				'id_user'					=> $this->input->post('id_user'),
+				'foto_user'					=> $image
+				
+			);
+			
+				$this->user->update($data);
+			}
+
 			$data = array(
 				'id_user'					=> $this->input->post('id_user'),
 				'nama_user'					=> $this->input->post('nama_user'),
@@ -97,10 +126,8 @@ class User extends CI_Controller {
 				'level_user'				=> $this->input->post('level_user'),
 				'username'					=> $this->input->post('username'),
 				'password'					=> $this->input->post('password')
-				
+
 			);
-			
-			$this->user->update($data);
 	
 			$this->session->set_flashdata('flash', 'Update Berhasil');
 			redirect(base_url('admin/user'),'refresh');

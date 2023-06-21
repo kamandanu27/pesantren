@@ -28,6 +28,7 @@
                   <th>Instansi</th>
                   <th>Level</th>
                   <th>Username</th>
+                  <th>Foto</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -44,6 +45,9 @@
                   <td><?= $row->instansi_user ?></td>
                   <td><?= $row->level_user ?></td>
                   <td><?= $row->username ?></td>
+                  <td>
+									    <img src="<?= base_url() ?>/public/image/upload/user/<?= $row->foto_user ?>" style="width: 80px; height: 100px;">
+						      </td>
                   
                   <td>
                       <a href="<?= base_url(); ?>admin/user/edit/<?= $row->id_user ?>" type="submit" class="btn btn-warning btn-sm" id="<?= $row->id_user ?>"><i class="fa fa-edit"></i></a>

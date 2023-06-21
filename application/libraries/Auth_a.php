@@ -23,6 +23,7 @@ class Auth_a {
 				'username'			=> $check->username,
 				'password'			=> $check->password,
 				'level_user'		=> $check->level_user,
+				'foto_user'			=> $check->foto_user,
 				'login'	=> true
 			];
 			$this->CI->session->set_userdata($data);

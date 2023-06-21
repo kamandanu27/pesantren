@@ -70,6 +70,14 @@
                     <input class="form-control" type="text" id="password" name="password">
                   </div>
                 </div>
+
+                <div class="form-group row">
+                     <label class="col-sm-3 col-form-label">Foto User</label>
+                        <div class="input-group col-sm-8 col-md-8">
+                          <input type="file" class="form-control" name="foto_user" id="foto_user" id="exampleInputUpload Foto1">
+                        </div>
+                </div>
+
                 
             </div>
 
