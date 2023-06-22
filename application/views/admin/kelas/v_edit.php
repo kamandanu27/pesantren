@@ -16,12 +16,38 @@
             <div class="tile-body">
               <div class="form-group row">
                 <label class="control-label col-md-3">Nama Kelas</label>
-                <div class="col-md-3">
+                <div class="col-md-8">
                   <input class="form-control" type="text" id="nama_kelas" name="nama_kelas" value="<?= $data['nama_kelas'] ?>" required>
                   <input class="form-control" type="hidden" id="id_kelas" name="id_kelas" value="<?= $data['id_kelas'] ?>" required>
                   <input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>" style="display: none">
                 </div>
               </div>
+
+              <div class="form-group row">
+									<label class="col-md-3 control-label">Institusi</label>
+                    <div class="input-group col-sm-8 col-md-8">
+                        <select class="form-control" id="id_institusi" name="id_institusi">
+                            <option value="<?= $data['id_institusi'] ?>"><?= $data['nama_institusi'] ?></option>
+                            <option value="">Pilih</option>
+                             <?php foreach($list_institusi as $row){ ?>
+                              <option value="<?= $row->id_institusi ?>"><?= $row->nama_institusi ?></option>
+                             <?php } ?>
+                        </select>
+                    </div>
+							</div>
+
+              <div class="form-group row">
+									<label class="col-md-3 control-label">Nama Guru</label>
+                    <div class="input-group col-sm-8 col-md-8">
+                        <select class="form-control" id="id_guru" name="id_guru">
+                            <option value="<?= $data['id_guru'] ?>"><?= $data['nama_guru'] ?></option>
+                            <option value="">Pilih</option>
+                             <?php foreach($list_guru as $row){ ?>
+                              <option value="<?= $row->id_guru ?>"><?= $row->nama_guru ?></option>
+                             <?php } ?>
+                        </select>
+                    </div>
+							</div>
               
             </div>
 

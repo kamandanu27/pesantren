@@ -13,6 +13,7 @@ class Santri_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('tbl_santri');
+		$this->db->join('tbl_kelas', 'tbl_santri.id_kelas = tbl_kelas.id_kelas');
 		$this->db->order_by('id_santri', 'Asc');
 		$query = $this->db->get();
 		return $query->result();
@@ -22,6 +23,7 @@ class Santri_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('tbl_santri');
+		$this->db->join('tbl_kelas', 'tbl_santri.id_kelas = tbl_kelas.id_kelas');
 		$this->db->where('id_santri', $id_santri);
 		$query = $this->db->get();
 		return $query;

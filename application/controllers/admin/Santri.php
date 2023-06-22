@@ -7,6 +7,7 @@ class Santri extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Santri_model', 'santri');
+		$this->load->model('Kelas_model', 'kelas');
 		$this->auth_a->cek();
 		$this->load->helper('tgl_indo');
 	}
@@ -26,6 +27,7 @@ class Santri extends CI_Controller {
 	public function add()
 	{
 		$data = array(
+			'list_kelas' 		=> $this->kelas->tabel(),
 			'title'			=> 'Admin - Tambah Santri',
 			'judul'			=> 'Tambah Santri',
 			'data' 			=> $this->santri->tabel(),
@@ -45,6 +47,7 @@ class Santri extends CI_Controller {
 		}else{
 
 			$data = array(
+				'list_kelas' 		=> $this->kelas->tabel(),
 				'title'			=> 'Admin - Edit Santri',
 				'judul'			=> 'Edit Santri',
 				'data' 			=> 	$this->santri->detail($id)->row_array(),
@@ -78,7 +81,8 @@ class Santri extends CI_Controller {
 				'alamat_santri'				=> $this->input->post('alamat_santri'),
 				'notlp_santri'				=> $this->input->post('notlp_santri'),
 				'username_santri'			=> $this->input->post('username_santri'),
-				'password_santri'			=> sha1($this->input->post('password_santri'))
+				'password_santri'			=> sha1($this->input->post('password_santri')),
+				'id_kelas'					=> $this->input->post('id_kelas')
 			);
 
 
@@ -102,7 +106,8 @@ class Santri extends CI_Controller {
 				'notlp_santri'				=> $this->input->post('notlp_santri'),
 				'username_santri'			=> $this->input->post('username_santri'),
 				'password_santri'			=> sha1($this->input->post('password_santri')),
-				'foto_santri'				=> $image 
+				'foto_santri'				=> $image,
+				'id_kelas'					=> $this->input->post('id_kelas') 
 			);
 
 		}
@@ -135,6 +140,7 @@ class Santri extends CI_Controller {
 						'alamat_santri'				=> $this->input->post('alamat_santri'),
 						'notlp_santri'				=> $this->input->post('notlp_santri'),
 						'username_santri'			=> $this->input->post('username_santri'),
+						'id_kelas'					=> $this->input->post('id_kelas')
 					);
 
 				}else{
@@ -145,7 +151,8 @@ class Santri extends CI_Controller {
 						'alamat_santri'				=> $this->input->post('alamat_santri'),
 						'notlp_santri'				=> $this->input->post('notlp_santri'),
 						'username_santri'			=> $this->input->post('username_santri'),
-						'password_santri'			=> sha1($this->input->post('password_santri'))
+						'password_santri'			=> sha1($this->input->post('password_santri')),
+						'id_kelas'					=> $this->input->post('id_kelas')
 					);	
 
 				}
@@ -168,7 +175,8 @@ class Santri extends CI_Controller {
 						'alamat_santri'				=> $this->input->post('alamat_santri'),
 						'notlp_santri'				=> $this->input->post('notlp_santri'),
 						'username_santri'			=> $this->input->post('username_santri'),
-						'foto_santri'				=> $image 
+						'foto_santri'				=> $image,
+						'id_kelas'					=> $this->input->post('id_kelas') 
 					);
 
 				}else{
@@ -181,7 +189,8 @@ class Santri extends CI_Controller {
 						'notlp_santri'				=> $this->input->post('notlp_santri'),
 						'username_santri'			=> $this->input->post('username_santri'),
 						'password_santri'			=> sha1($this->input->post('password_santri')),
-						'foto_santri'				=> $image 
+						'foto_santri'				=> $image,
+						'id_kelas'					=> $this->input->post('id_kelas') 
 					);
 
 				}

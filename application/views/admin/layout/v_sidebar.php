@@ -25,6 +25,7 @@
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/user"><i class="icon fa fa-circle-o"></i> User</a></li>
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/juz"><i class="icon fa fa-circle-o"></i> Juz</a></li>
             <li><a class="treeview-item" href="<?= base_url(); ?>admin/surat"><i class="icon fa fa-circle-o"></i> Surat</a></li>
+            <li><a class="treeview-item" href="<?= base_url(); ?>admin/institusi"><i class="icon fa fa-circle-o"></i> Institusi</a></li>
           </ul>
         </li>
       <?php

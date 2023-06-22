@@ -13,7 +13,7 @@
     <div class="col-md-12">
       <div class="tile">
         <div class="tile-title-w-btn">
-          <p><a href="<?= base_url(); ?>admin/santri/add" class="btn btn-primary icon-btn"><i class="fa fa-plus"></i>Tambah Data</a></p>
+          <p><a href="<?= base_url(); ?>admin/institusi/add" class="btn btn-primary icon-btn"><i class="fa fa-plus"></i>Tambah Data</a></p>
         </div>
         <div class="tile-body">
           <div class="table-responsive">
@@ -21,13 +21,7 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama</th>
-                  <th>Nis</th>
-                  <th>Alamat</th>
-                  <th>No. Telp</th>
-                  <th>Username</th>
-                  <th>Foto</th>
-                  <th>Kelas</th>
+                  <th>Nama Institusi</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -37,17 +31,12 @@
               ?>
                 <tr>
                   <td><?= $no++ ?></td>
-                  <td><?= $row->nama_santri ?></td>
-                  <td><?= $row->nis_santri ?></td>
-                  <td><?= $row->alamat_santri ?></td>
-                  <td><?= $row->notlp_santri ?></td>
-                  <td><?= $row->username_santri ?></td>
-                  <td><img src="<?= base_url()?>/public/image/upload/santri/<?= $row->foto_santri ?>" style="width: 80px; height: 100px;"></td>
-                  <td><?= $row->nama_kelas ?></td>
+                  <td><?= $row->nama_institusi ?></td>
+                  
                   <td>
-                      <a href="<?= base_url(); ?>admin/santri/edit/<?= $row->id_santri ?>" type="submit" class="btn btn-warning btn-sm" id="<?= $row->id_santri ?>"><i class="fa fa-edit"></i></a>
+                      <a href="<?= base_url(); ?>admin/institusi/edit/<?= $row->id_institusi ?>" type="submit" class="btn btn-warning btn-sm" id="<?= $row->id_institusi ?>"><i class="fa fa-edit"></i></a>
 
-                      <a type="submit" class="btn btn-sm btn-danger btnhapus" id="<?= $row->id_santri ?>"><i class="fa fa-trash"></i></a>
+                      <a type="submit" class="btn btn-sm btn-danger btnhapus" id="<?= $row->id_institusi ?>"><i class="fa fa-trash"></i></a>
                     
                   </td>
                 </tr>
@@ -65,10 +54,10 @@
   <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Tambah Santri</h5>
+        <h5 class="modal-title">Tambah institusi</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
       </div>
-      <form action="<?= base_url() ?>admin/santri/insert" method="post"> 
+      <form action="<?= base_url() ?>admin/institusi/insert" method="post"> 
         <div class="modal-body">
           <div class="form-group">
             <label class="control-label">Jenis</label>
@@ -80,8 +69,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label class="control-label">Santri Usaha</label>
-            <input class="form-control" type="text" id="nama_santri" name="nama_santri" placeholder="" required>
+            <label class="control-label">institusi Usaha</label>
+            <input class="form-control" type="text" id="nama_institusi" name="nama_institusi" placeholder="" required>
           </div>
         </div>
         <div class="modal-footer">
@@ -97,12 +86,12 @@
   <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Edit Santri</h5>
+        <h5 class="modal-title">Edit institusi</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
       </div>
-      <form action="<?= base_url() ?>admin/santri/update" method="post"> 
+      <form action="<?= base_url() ?>admin/institusi/update" method="post"> 
         <div class="modal-body">
-          <div id="id_santri">
+          <div id="id_institusi">
 
           </div>
         </div>

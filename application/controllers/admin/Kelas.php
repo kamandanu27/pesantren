@@ -7,6 +7,8 @@ class Kelas extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Kelas_model', 'kelas');
+		$this->load->model('Institusi_model', 'institusi');
+		$this->load->model('Guru_model', 'guru');
 		$this->auth_a->cek();
 		$this->load->helper('tgl_indo');
 	}
@@ -26,6 +28,8 @@ class Kelas extends CI_Controller {
 	public function add()
 	{
 		$data = array(
+			'list_institusi' 	=> $this->institusi->tabel(),
+			'list_guru' 	=> $this->guru->tabel(),
 			'title'			=> 'Admin - Tambah Kelas',
 			'judul'			=> 'Tambah Kelas',
 			'data' 			=> $this->kelas->tabel(),
@@ -45,6 +49,8 @@ class Kelas extends CI_Controller {
 		}else{
 
 			$data = array(
+				'list_institusi' 	=> $this->institusi->tabel(),
+				'list_guru' 	=> $this->guru->tabel(),
 				'title'			=> 'Admin - Edit Kelas',
 				'judul'			=> 'Edit Kelas',
 				'data' 			=> 	$this->kelas->detail($id)->row_array(),
@@ -61,7 +67,9 @@ class Kelas extends CI_Controller {
 			
 			$data = array(
 				'id_kelas'				=> $this->input->post('id_kelas'),
-				'nama_kelas'			=> $this->input->post('nama_kelas')
+				'nama_kelas'			=> $this->input->post('nama_kelas'),
+				'id_institusi'				=> $this->input->post('id_institusi'),
+				'id_guru'				=> $this->input->post('id_guru')
 				
 			);
 
@@ -85,6 +93,8 @@ class Kelas extends CI_Controller {
 			$data = array(
 				'id_kelas'				=> $this->input->post('id_kelas'),
 				'nama_kelas'			=> $this->input->post('nama_kelas'),
+				'id_institusi'				=> $this->input->post('id_institusi'),
+				'id_guru'				=> $this->input->post('id_guru')
 				
 			);
 			

@@ -22,6 +22,8 @@
                 <tr>
                   <th>No</th>
                   <th>Nama Kelas</th>
+                  <th>Institusi</th>
+                  <th>Nama Guru</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -32,6 +34,8 @@
                 <tr>
                   <td><?= $no++ ?></td>
                   <td><?= $row->nama_kelas ?></td>
+                  <td><?= $row->nama_institusi ?></td>
+                  <td><?= $row->nama_guru ?></td>
                   
                   <td>
                       <a href="<?= base_url(); ?>admin/kelas/edit/<?= $row->id_kelas ?>" type="submit" class="btn btn-warning btn-sm" id="<?= $row->id_kelas ?>"><i class="fa fa-edit"></i></a>

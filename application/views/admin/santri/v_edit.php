@@ -58,6 +58,18 @@
                   <input class="form-control" type="file" id="foto_santri" name="foto_santri" value="<?= $data['foto_santri'] ?>" required>
                 </div>
               </div>
+              <div class="form-group row">
+									<label class="control-label col-md-3">Kelas</label>
+                      <div class="col-md-8">
+                          <select class="form-control" id="id_kelas" name="id_kelas">
+                          <option value="<?= $data['id_kelas'] ?>"><?= $data['nama_kelas'] ?></option>
+                                <option value="">Pilih</option>
+                                <?php foreach($list_kelas as $row){ ?>
+                                  <option value="<?= $row->id_kelas ?>"><?= $row->nama_kelas ?></option>
+                                <?php } ?>
+                          </select>
+                      </div>
+							</div>
                 
             </div>
 

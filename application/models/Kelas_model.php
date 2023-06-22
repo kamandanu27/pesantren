@@ -13,6 +13,8 @@ class Kelas_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('tbl_kelas');
+		$this->db->join('tbl_institusi', 'tbl_kelas.id_institusi = tbl_institusi.id_institusi');
+		$this->db->join('tbl_guru', 'tbl_kelas.id_guru = tbl_guru.id_guru');
 		$this->db->order_by('id_kelas', 'Asc');
 		$query = $this->db->get();
 		return $query->result();
@@ -22,6 +24,8 @@ class Kelas_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('tbl_kelas');
+		$this->db->join('tbl_institusi', 'tbl_kelas.id_institusi = tbl_institusi.id_institusi');
+		$this->db->join('tbl_guru', 'tbl_kelas.id_guru = tbl_guru.id_guru');
 		$this->db->where('id_kelas', $id_kelas);
 		$query = $this->db->get();
 		return $query;
