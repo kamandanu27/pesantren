@@ -72,7 +72,7 @@ class Guru extends CI_Controller {
 
 		if($_FILES["foto_guru"]['name'] == ""){
 			$data = array(
-				'id_guru'	=> $this->input->post('id_guru'),
+				'id_guru'				=> $this->input->post('id_guru'),
 				'nama_guru'				=> $this->input->post('nama_guru'),
 				'nip_guru'				=> $this->input->post('nip_guru'),
 				'alamat_guru'			=> $this->input->post('alamat_guru'),
